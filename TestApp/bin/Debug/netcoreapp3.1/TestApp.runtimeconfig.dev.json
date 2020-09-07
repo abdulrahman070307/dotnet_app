@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Troon.net\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Troon.net\\.nuget\\packages"
+    ]
+  }
+}
