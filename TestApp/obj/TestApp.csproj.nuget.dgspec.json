@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Troon.net\\source\\repos\\TestApp\\TestApp\\TestApp.csproj": {}
+    "E:\\DemoApp-master\\DemoApp-master\\TestApp\\TestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Troon.net\\source\\repos\\TestApp\\TestApp\\TestApp.csproj": {
+    "E:\\DemoApp-master\\DemoApp-master\\TestApp\\TestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Troon.net\\source\\repos\\TestApp\\TestApp\\TestApp.csproj",
+        "projectUniqueName": "E:\\DemoApp-master\\DemoApp-master\\TestApp\\TestApp.csproj",
         "projectName": "TestApp",
-        "projectPath": "C:\\Users\\Troon.net\\source\\repos\\TestApp\\TestApp\\TestApp.csproj",
+        "projectPath": "E:\\DemoApp-master\\DemoApp-master\\TestApp\\TestApp.csproj",
         "packagesPath": "C:\\Users\\Troon.net\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Troon.net\\source\\repos\\TestApp\\TestApp\\obj\\",
+        "outputPath": "E:\\DemoApp-master\\DemoApp-master\\TestApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Troon.net\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
         "netcoreapp3.1": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.7, )"
             },

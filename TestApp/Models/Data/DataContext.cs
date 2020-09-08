@@ -12,20 +12,9 @@ namespace TestApp.Models.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Pet> Pets { get; set; }
-        public DbSet<Test> Tests { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
-        }
-
-        public List<User> GetUsers()
-        {
-            List<User> userList = new List<User>();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "Call GetAllUsers()";
-            var val = cmd.ExecuteReader();
-            //userList = val;
-            return userList;
         }
     }
 }

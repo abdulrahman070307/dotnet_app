@@ -25,8 +25,6 @@ namespace TestApp.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            var val = _context.Tests.FromSqlRaw("Call GetTestUsers3()").ToList();
-            List<Test> tes = val;
             //return View(val);
             return View(await _context.Users.ToListAsync());
         }
