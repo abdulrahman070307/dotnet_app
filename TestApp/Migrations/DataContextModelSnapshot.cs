@@ -16,72 +16,67 @@ namespace TestApp.Migrations
                 .HasAnnotation("ProductVersion", "3.1.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("TestApp.Models.Pet", b =>
+            modelBuilder.Entity("TestApp.Models.AddAssetDto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Account")
                         .HasColumnType("text");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Pets");
+                    b.ToTable("AddAssetDto");
                 });
 
-            modelBuilder.Entity("TestApp.Models.Test", b =>
+            modelBuilder.Entity("TestApp.Models.Asset", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("pet")
+                    b.Property<string>("AuthorAcc")
                         .HasColumnType("text");
 
-                    b.Property<string>("user")
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NFT")
+                        .HasColumnType("text");
+
+                    b.Property<string>("OwnerAcc")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tests");
+                    b.ToTable("Assets");
                 });
 
-            modelBuilder.Entity("TestApplication.Models.User", b =>
+            modelBuilder.Entity("TestApp.Models.Transaction", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("EmailAddress")
+                    b.Property<string>("AccountId")
                         .HasColumnType("text");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("TransactionId")
                         .HasColumnType("text");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("text");
+                    b.HasKey("Id");
 
-                    b.Property<string>("UserName")
-                        .HasColumnType("text");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("TestApp.Models.Pet", b =>
-                {
-                    b.HasOne("TestApplication.Models.User", null)
-                        .WithMany("Pets")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.ToTable("Transactions");
                 });
 #pragma warning restore 612, 618
         }
